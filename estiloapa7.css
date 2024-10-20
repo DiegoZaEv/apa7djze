@@ -30,7 +30,7 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Añadido transform */
 }
 
 button:hover {
@@ -59,14 +59,14 @@ h2 {
 
 .team-members {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-around; /* Cambiado a space-between para más espacio */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
 }
 
 .member {
     text-align: center;
-    margin: 1rem;
-    transition: transform 0.3s;
+    margin: 1rem; /* Espaciado alrededor de cada miembro */
+    transition: transform 0.3s; /* Transición suave al escalar */
 }
 
 .member:hover {
@@ -74,51 +74,69 @@ h2 {
 }
 
 .member-image {
-    width: 150px;
-    height: 150px;
+    width: 150px; /* Tamaño fijo para imágenes */
+    height: 150px; /* Tamaño fijo para imágenes */
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #D2691E;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border: 3px solid #D2691E; /* Borde alrededor de la imagen */
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%; /* Tabla ocupa el ancho completo */
+    border-collapse: collapse; /* Colapsa bordes de celdas */
 }
 
 th, td {
-    border: 1px solid #DEB887;
-    padding: 8px;
-    text-align: left;
+    border: 1px solid #DEB887; /* Bordes de celdas */
+    padding: 8px; /* Espaciado interno en celdas */
+    text-align: left; /* Alineación del texto a la izquierda */
 }
 
 th {
-    background-color: #D2691E;
-    color: #FFF8DC;
+    background-color: #D2691E; /* Color de fondo para encabezados */
+    color: #FFF8DC; /* Color del texto en encabezados */
 }
 
 tr:nth-child(even) {
-    background-color: #F4E1C9;
+    background-color: #F4E1C9; /* Color alternativo para filas pares */
 }
 
 tr:nth-child(odd) {
-    background-color: #FFF8DC;
+    background-color: #FFF8DC; /* Color alternativo para filas impares */
 }
 
 .hidden {
-    display: none;
+    display: none; /* Elementos ocultos */
 }
 
 .active {
-    display: block;
+    display: block; /* Elementos visibles cuando están activos */
 }
 
+/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-    .team-members {
-        flex-direction: column;
-    }
     
-    table {
-        font-size: 14px;
-    }
-}   
+   nav { 
+        font-size: 14px; /* Ajusta el tamaño de fuente en navegación */
+   }
+   
+   button { 
+        width: calc(100% - 10px); /* Botones ocupan el ancho completo menos márgenes */ 
+        margin-bottom: 10px; /* Espaciado inferior entre botones */ 
+   }
+    
+   .team-members { 
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */ 
+        align-items:center; /* Centra los elementos dentro del contenedor */ 
+   }
+    
+   .member { 
+        width: calc(100% - 20px); /* Miembros ocupan el ancho completo menos márgenes */ 
+        max-width :300px ;/* Limita el ancho máximo para miembros */ 
+   }
+    
+   table { 
+        font-size :14px ;/* Ajusta el tamaño de fuente en tabla */ 
+        overflow-x:auto ;/* Permite desplazamiento horizontal si es necesario */ 
+   }
+}
