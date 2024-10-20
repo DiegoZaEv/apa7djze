@@ -30,7 +30,7 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Añadido transform */
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -59,14 +59,14 @@ h2 {
 
 .team-members {
     display: flex;
-    justify-content: space-around; /* Cambiado a space-between para más espacio */
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .member {
     text-align: center;
-    margin: 1rem; /* Espaciado alrededor de cada miembro */
-    transition: transform 0.3s; /* Transición suave al escalar */
+    margin: 1rem;
+    transition: transform 0.3s;
 }
 
 .member:hover {
@@ -74,69 +74,51 @@ h2 {
 }
 
 .member-image {
-    width: 150px; /* Tamaño fijo para imágenes */
-    height: 150px; /* Tamaño fijo para imágenes */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-    border: 3px solid #D2691E; /* Borde alrededor de la imagen */
+    object-fit: cover;
+    border: 3px solid #D2691E;
 }
 
 table {
-    width: 100%; /* Tabla ocupa el ancho completo */
-    border-collapse: collapse; /* Colapsa bordes de celdas */
+    width: 100%;
+    border-collapse: collapse;
 }
 
 th, td {
-    border: 1px solid #DEB887; /* Bordes de celdas */
-    padding: 8px; /* Espaciado interno en celdas */
-    text-align: left; /* Alineación del texto a la izquierda */
+    border: 1px solid #DEB887;
+    padding: 8px;
+    text-align: left;
 }
 
 th {
-    background-color: #D2691E; /* Color de fondo para encabezados */
-    color: #FFF8DC; /* Color del texto en encabezados */
+    background-color: #D2691E;
+    color: #FFF8DC;
 }
 
 tr:nth-child(even) {
-    background-color: #F4E1C9; /* Color alternativo para filas pares */
+    background-color: #F4E1C9;
 }
 
 tr:nth-child(odd) {
-    background-color: #FFF8DC; /* Color alternativo para filas impares */
+    background-color: #FFF8DC;
 }
 
 .hidden {
-    display: none; /* Elementos ocultos */
+    display: none;
 }
 
 .active {
-    display: block; /* Elementos visibles cuando están activos */
+    display: block;
 }
 
-/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+    }
     
-   nav { 
-        font-size: 14px; /* Ajusta el tamaño de fuente en navegación */
-   }
-   
-   button { 
-        width: calc(100% - 10px); /* Botones ocupan el ancho completo menos márgenes */ 
-        margin-bottom: 10px; /* Espaciado inferior entre botones */ 
-   }
-    
-   .team-members { 
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */ 
-        align-items:center; /* Centra los elementos dentro del contenedor */ 
-   }
-    
-   .member { 
-        width: calc(100% - 20px); /* Miembros ocupan el ancho completo menos márgenes */ 
-        max-width :300px ;/* Limita el ancho máximo para miembros */ 
-   }
-    
-   table { 
-        font-size :14px ;/* Ajusta el tamaño de fuente en tabla */ 
-        overflow-x:auto ;/* Permite desplazamiento horizontal si es necesario */ 
-   }
-}
+    table {
+        font-size: 14px;
+    }
+}   
