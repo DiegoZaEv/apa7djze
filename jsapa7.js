@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tableSection.classList.add('hidden');
             teamSection.classList.remove('hidden');
             teamSection.classList.add('active');
-            toggleButton.textContent = 'Ver Tabla de Información';
+            toggleButton.textContent = 'Ver Información';
         }
     });
 
