@@ -113,7 +113,18 @@ tr:nth-child(odd) {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) { 
+    .team-members {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 8px;
+    }
+    
+}
+
+@media (min-width: 768px) {
     .team-members {
         flex-direction: column;
     }
@@ -121,4 +132,4 @@ tr:nth-child(odd) {
     table {
         font-size: 14px;
     }
-}   
+}  
